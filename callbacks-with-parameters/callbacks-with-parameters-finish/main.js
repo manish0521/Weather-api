@@ -6,16 +6,12 @@ window.onload = init;
 
 function init() {
     document.querySelector('.new-york')
-        .addEventListener('click', toggleToNY);
+        .addEventListener('click', () => toggleTheme(newYork));
 
     document.querySelector('.lawrence')
-        .addEventListener('click', toggleToLawrence);
+        .addEventListener('click', () => toggleTheme(lawrence));
 }
 
-function toggleToNY() {
-    console.log(newYork);
-}
-
-function toggleToLawrence() {
-    console.log(lawrence);
+function toggleTheme(city) {
+    console.log(city);
 }
