@@ -1,14 +1,23 @@
 window.onload = init;
 
-let response = {
+let response = `{
     "gameOfThronesBodyCount": 0
-};
+}`;
 
 function init() {
     console.log(`Requesting data.`);
-    response = {
-        gameOfThronesBodyCount: 1
-    };
+    sendRequest();
+    
     console.log('Displaying network response:');
-    console.log(response);
+}
+
+function sendRequest() {    
+    setTimeout(handleData, 1500);
+}
+
+function handleData() {
+    response = `{
+        "gameOfThronesBodyCount": 1
+    }`;
+    console.log(JSON.parse(response));
 }
